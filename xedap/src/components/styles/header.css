@@ -1,0 +1,99 @@
+/* General styles */
+header {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.logo img {
+    max-width: 100%; /* Đảm bảo hình ảnh không vượt quá kích thước container */
+    height: auto;    /* Duy trì tỷ lệ của hình ảnh */
+    max-height: 100px; /* Giới hạn chiều cao logo (tuỳ chỉnh theo thiết kế) */
+}
+
+.logo {
+    display: flex;
+    align-items: center; /* Căn giữa logo theo chiều dọc */
+}
+
+
+/* Topbar styles */
+#topbar {
+    background-color: #343a40;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#topbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#topbar .login a,
+#topbar .lang a,
+#topbar .currency a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#topbar .toggler ul {
+    display: none;
+    background: #444;
+    position: absolute;
+    padding: 10px;
+}
+
+#topbar .toggler:hover ul {
+    display: block;
+}
+
+/* Menubar styles */
+#menubar {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#menubar .logo {
+    display: flex;
+    align-items: center;
+}
+
+#menubar .logo p {
+    margin: 0 0 0 10px;
+    font-weight: bold;
+}
+
+#menubar .navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+#menubar .navigation ul li a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    #topbar .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #menubar .navigation ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    #menubar .sandwich:hover + .navigation ul {
+        display: flex;
+    }
+
+    #menubar .navigation ul li {
+        margin: 10px 0;
+    }
+}
